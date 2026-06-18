@@ -18,37 +18,7 @@ paths:
           type: string
           default: application/json
           enum:
-          - application/json
-      - name: search_keys
-        in: query
-        description: |
-          A comma (,) separated list of search identifiers.  Identifiers are based on the `search_type` field.  Limit 100 per request.
-
-          Example: F,AAPL
-
-          Logos can also be queried with format <EXCHANGE>:<SYMBOL> 
-          i.e. NYSE:ARI
-        required: true
-        style: form
-        explode: false
-        schema:
-          maxItems: 100
-          type: array
-          items:
-            type: string
-            format: array
-      - name: search_keys_type
-        in: query
-        description: The type of identifier being searched.  Supported types are currently
-          a security symbol and CIK.
-        schema:
-          type: string
-          default: symbol
-          enum:
-          - symbol
-          - cik
-          - cusip
-          - isin
+          - application/json      
       - name: fields
         in: query
         description: |
